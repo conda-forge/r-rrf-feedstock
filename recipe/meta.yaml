@@ -1,4 +1,4 @@
-{% set version = '1.9.1' %}
+{% set version = "1.9.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RRF_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RRF/RRF_{{ version }}.tar.gz
-  sha256: 3c3c5b349861090ffd31e3187a5a7618bc2fb3faf5d55a5b7b483b769c6daa8c
+  sha256: def755a044e62a316a2bd59bd5e84587d3b66aec5babb50cb351d6d765b4bb12
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
 
   rpaths:
     - lib/R/lib/
@@ -48,13 +48,11 @@ about:
   home: https://sites.google.com/site/houtaodeng/rrf
 
   license: GPL-2.0-or-later
-  summary: Feature Selection with Regularized Random Forest. This package is based on the 'randomForest'
-    package by Andy Liaw. The key difference is the RRF() function that builds a regularized
-    random forest.
+  summary: Feature Selection with Regularized Random Forest. This package is based on the 'randomForest' package by Andy Liaw. The key difference is the RRF() function that builds a regularized random forest.
 
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
