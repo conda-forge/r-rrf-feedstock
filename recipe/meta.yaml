@@ -1,4 +1,4 @@
-{% set version = "1.9.3" %}
+{% set version = "1.9.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RRF_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RRF/RRF_{{ version }}.tar.gz
-  sha256: def755a044e62a316a2bd59bd5e84587d3b66aec5babb50cb351d6d765b4bb12
+  sha256: 4b3e6ffcf2aa46fb638a1d73c60c7984c56ba8b9e0e8ff1072528d1a36e0becd
 
 build:
   merge_build_host: true  # [win]
