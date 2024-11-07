@@ -1,4 +1,4 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RRF_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RRF/RRF_{{ version }}.tar.gz
-  sha256: 4b3e6ffcf2aa46fb638a1d73c60c7984c56ba8b9e0e8ff1072528d1a36e0becd
+  sha256: 1abec4f53bcf25ea302b542be013daaffa880edfdb1d05559adef32c71e65a17
 
 build:
-  number: 3
+  number: 0
 
   rpaths:
     - lib/R/lib/
